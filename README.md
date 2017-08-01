@@ -4,3 +4,6 @@ This R package contains the MSigDB gene set collections (version 5.0 downloaded 
 
 ## Installation
 devtools::install_github("mw201608/msigdb")
+
+## Usage
+See help documentation ?msigdb.genesets
