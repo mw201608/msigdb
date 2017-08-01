@@ -1,0 +1,10 @@
+export(
+	read.gmt,
+	read.obo,
+	read.gaf,
+	write.gmt,
+	convert.msigdb.genesets,
+	msigdb.genesets,
+	msigdb.version
+)
+importFrom('utils','download.file','read.table')

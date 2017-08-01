@@ -1,0 +1,10 @@
+Package: msigdb
+Type: Package
+Title: MSigDB Gene Set Collections
+Version: 0.1.2
+Date: 2015-07-14
+Author: Minghui Wang
+Maintainer: Minghui Wang <minghui.wang@mssm.edu>
+Description: This package contains the MSigDB gene set collections (version 5.0 downloaded on Jul 14, 2015). The official MSigDB website is http://www.broadinstitute.org/gsea/msigdb.
+License: CC0
+Suggests: orthology
