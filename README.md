@@ -6,4 +6,7 @@ This R package contains the MSigDB gene set collections (version 5.0 downloaded 
 devtools::install_github("mw201608/msigdb")
 
 ## Usage
-See help documentation ?msigdb.genesets
+See help documentation ?msigdb.genesets for how to loading the gene sets
+
+An example of performing functional enrichment analysis with the MSigDB gene sets can be found in a related package GOplot at
+https://github.com/ericaenjoy3/GOplot
