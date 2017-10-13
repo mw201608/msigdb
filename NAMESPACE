@@ -4,6 +4,7 @@ export(
 	read.gaf,
 	write.gmt,
 	convert.msigdb.genesets,
+	msigdb.collections,
 	msigdb.genesets,
 	msigdb.version
 )
