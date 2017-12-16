@@ -10,7 +10,7 @@ See help documentation ?msigdb.genesets for how to loading the gene sets. For ex
 ```
 Result=msigdb.genesets(sets=c('C5.BP','C5.CC', 'C5.MF'), type='symbols', species='human')
 ```
-To see all available gene sets, run
+To see all available gene sets, see variable
 ```
 msigdb.collections
 ```
