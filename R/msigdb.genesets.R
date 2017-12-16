@@ -23,7 +23,7 @@ msigdb.genesets=function(sets=NULL, type=c('symbols', 'entrez'),species=c('human
 		}else{
 			obj$genesets=c(obj$genesets,res$genesets)
 			obj$geneset.names=c(obj$geneset.names,res$geneset.names)
-			obj$geneset.description=c(obj$geneset.description,res$geneset.description)
+			obj$geneset.descriptions=c(obj$geneset.descriptions,res$geneset.descriptions)
 		}
 	}
 	names(obj$genesets)=obj$geneset.names
