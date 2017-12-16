@@ -12,7 +12,7 @@ Result=msigdb.genesets(sets=c('C5.BP','C5.CC', 'C5.MF'), type='symbols', species
 ```
 To see all available gene sets, run
 ```
-msigdb.collections()
+msigdb.collections
 ```
 An example of performing functional enrichment analysis with the MSigDB gene sets can be found in a related package GOplot at
 https://github.com/ericaenjoy3/GOplot
