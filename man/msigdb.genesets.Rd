@@ -9,7 +9,7 @@
 \arguments{
  \item{sets}{A vector of possible gene set collections. See \code{details}.}
  \item{type}{Type of gene name. Must be one of '\code{symbols}' and '\code{entrez}'.}
- \item{species}{Specifying the species of gene set.}
+ \item{species}{Specifying the species of gene set. Mouse gene sets were converted from human gene sets by orthology mapping.}
 }
 \details{
 To view the collections of available MSigDB gene sets, see exported variable \code{\link{msigdb.collections}}. If \code{sets} is \code{NULL}, all the collections will be returned.

@@ -1,4 +1,4 @@
 #Author: Minghui Wang
 msigdb.version=function(){
-	'v5.0'
+	'v6.1'
 }
