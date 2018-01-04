@@ -18,6 +18,7 @@ No returned value.
 }
 \seealso{\code{\link{read.gmt}}, \code{\link{write.gmt}}}
 \examples{
-##not run###
-#x=convert.msigdb.genesets()
+\dontrun{
+x=convert.msigdb.genesets('human','mouse')
+}
 }

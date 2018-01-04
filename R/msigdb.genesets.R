@@ -1,5 +1,5 @@
 #Author: Minghui Wang
-msigdb.genesets=function(sets=NULL, type=c('symbols', 'entrez'),species=c('human','mouse')){
+msigdb.genesets=function(sets=NULL, type=c('symbols', 'entrez'),species=c('human','mouse'),return.data.frame=FALSE){
 	type=match.arg(type)
 	species=match.arg(species)
 	if(species=='mouse' && type=='entrez') stop('Only symbols type is supported for mouse\n')
@@ -13,10 +13,13 @@ msigdb.genesets=function(sets=NULL, type=c('symbols', 'entrez'),species=c('human
 	if(! all(sets %in% msigdb.collections)) stop('Invalid values for argument sets\n')
 	obj=NULL
 	for(s in sets){
-		#f=file.path(system.file("extdata", package="msigdb"),gmtfiles[s])
-		#res=read.gmt(f)
-		f=file.path(system.file("extdata", package="msigdb"),paste0(gmtfiles[s],'.RDS')) #see convert.gmt2RDS for save gmt in RDS format
-		res=readRDS(f)
+		f=file.path(system.file("extdata", package="msigdb"),gmtfiles[s])
+		f1=paste0(f,'.RDS') #see convert.gmt2RDS for save gmt in RDS format
+		if(file.exists(f1)){
+			res=readRDS(f1)
+		}else{
+			res=read.gmt(f)
+		}
 		res$geneset.names=paste(s,res$geneset.names,sep=':')
 		if(is.null(obj)){
 			obj=res
@@ -27,6 +30,8 @@ msigdb.genesets=function(sets=NULL, type=c('symbols', 'entrez'),species=c('human
 		}
 	}
 	names(obj$genesets)=obj$geneset.names
-	obj
+	if(return.data.frame==FALSE) return(obj)
+	go1=lapply(1:length(obj$genesets),function(i) data.frame(genes=obj$genesets[[i]],set=names(obj$genesets)[i],stringsAsFactors=FALSE))
+	unique(do.call(rbind,go1))
 }
 #

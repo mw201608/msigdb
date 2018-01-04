@@ -22,6 +22,7 @@ Function \code{read.gmt} returns a list with three components:
 }
 \seealso{\code{\link{msigdb.genesets}}, \code{\link{msigdb.version}}}
 \examples{
-##not run###
-#x=read.gmt('c2.all.v4.0.symbols.gmt')
+\dontrun{
+x=read.gmt('c2.all.v4.0.symbols.gmt')
+}
 }
