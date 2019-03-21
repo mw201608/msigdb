@@ -14,5 +14,8 @@ To see all available gene sets, see variable
 ```
 msigdb.collections
 ```
-An example of performing functional enrichment analysis with the MSigDB gene sets can be found in a related package GOplot at
-https://github.com/ericaenjoy3/GOplot
+Examples of performing functional enrichment analysis with the MSigDB gene sets can be found in two packages:
+
+##### 1. GOtest, available at https://github.com/mw201608/GOtest
+
+##### 2. GOplot, available at https://github.com/ericaenjoy3/GOplot
