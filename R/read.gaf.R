@@ -17,7 +17,7 @@ read.gaf=function(filename='http://geneontology.org/gene-associations/gene_assoc
 	}else{
 		conn=file(inf,'r')
 	}
-	dat=read.table(conn,sep='\t',as.is=TRUE,header=FALSE,quote="",comment.char='!')[,c(2,3,5)]
+	dat=read.delim(conn,sep='\t',as.is=TRUE,header=FALSE,quote="",comment.char='!')[,c(2,3,5)]
 	close(conn)
 	if(down) unlink(temp)
 	colnames(dat)=c('ID','Symbol','GO.ID')
