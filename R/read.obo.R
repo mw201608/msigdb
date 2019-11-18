@@ -19,6 +19,7 @@ read.obo=function(filename='http://purl.obolibrary.org/obo/go.obo'){
 	nEmpty=0
 	dat=NULL
 	n=0
+	cat('Processing obo file...\n')
 	while(TRUE){
 		s=scan(conn,what=character(),nlines=1,quiet=TRUE,quote="")
 		n=n+1
