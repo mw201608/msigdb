@@ -13,7 +13,10 @@ convert.msigdb.genesets=function(source.species='human',target.species='mouse'){
 		genesets=lapply(obj$genesets,function(x){
 			homology[homology$Query %in% x,'Target']
 		})
-		obj$genesets=genesets
+		ni = sapply(genesets, length) > 0
+		obj$geneset.descriptions=obj$geneset.descriptions[ni]
+		obj$geneset.names=obj$geneset.names[ni]
+		obj$genesets=genesets[ni]
 		write.gmt(obj,paste(target.species,f,sep='/'))
 		cat('File',f,'processed\n')
 	}
