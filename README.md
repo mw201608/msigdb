@@ -1,6 +1,6 @@
 # MSigDB Gene Set Collections
 
-This R package contains the MSigDB gene set collections (version 6.1 downloaded on Dec 26, 2017). The official MSigDB website is http://www.broadinstitute.org/gsea/msigdb.
+This R package contains the MSigDB gene set collections (version 7.1 downloaded on June 22, 2020). The official MSigDB website is https://www.gsea-msigdb.org/gsea/index.jsp.
 
 ## Installation
 devtools::install_github("mw201608/msigdb")
