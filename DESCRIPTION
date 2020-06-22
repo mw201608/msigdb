@@ -8,3 +8,4 @@ Maintainer: Minghui Wang <m.h.wang@live.com>
 Description: This package contains the MSigDB gene set collections (version 7.1 downloaded on June 22, 2020). The official MSigDB website is https://www.gsea-msigdb.org/gsea/index.jsp.
 License: CC0
 Suggests: orthology
+Depends: R (>= 3.5.0)
