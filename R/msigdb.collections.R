@@ -1,1 +1,1 @@
-msigdb.collections=c('C1.CYTO','C2.CGP','C2.CP','C3.MIR','C3.TFT','C4.CGN','C4.CM','C5.BP','C5.CC','C5.MF','C6.ONCOGENE','C7.IMMUNE','CH.HALLMARK')
+msigdb.collections = c("c1.all", "c2.cgp", "c2.cp", "c3.all", "c3.mir", "c3.tft", "c4.cgn", "c4.cm", "c5.go.bp", "c5.go.cc", "c5.go.mf", "c5.hpo", "c6.all", "c7.immunesigdb", "c7.vax", "c8.all", "h.all")

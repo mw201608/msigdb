@@ -1,5 +1,27 @@
 #Author: Minghui Wang
-msigdb.genesets=function(sets=NULL, type=c('symbols', 'entrez'),species=c('human','mouse'),return.data.frame=FALSE){
+msigdb.genesets = function(sets = NULL, type = c('symbols', 'entrez'), species = c('human', 'mouse'), return.data.frame = FALSE){
+	type = match.arg(type)
+	species = match.arg(species)
+	if(is.null(sets)) sets = msigdb.collections
+	if(! all(sets %in% msigdb.collections)) stop('Invalid values for argument sets\n')
+	if(species == 'mouse' && type == 'entrez') stop('Only symbols type is supported for mouse\n')
+	rdsfile = file.path(system.file("extdata", package = "msigdbi"), paste0('msigdb.v7.4.', type, '.', species, '.RDS'))
+	obj = readRDS(rdsfile)
+	genesetlistfile = file.path(system.file("extdata", package = "msigdbi"), 'msigdb.v7.4.geneset.list.RDS')
+	genesetlist = readRDS(genesetlistfile)
+	genesetlist = genesetlist[sets]
+	idx = match(unlist(genesetlist), names(obj$genesets))
+	obj$genesets = obj$genesets[idx]
+	obj$geneset.names = obj$geneset.names[idx]
+	obj$geneset.descriptions = obj$geneset.descriptions[idx]
+	names(obj$genesets) = obj$geneset.names = unlist(lapply(1:length(genesetlist), function(i){
+		paste(names(genesetlist)[i], genesetlist[[i]], sep = ':')
+	}))
+	if(return.data.frame == FALSE) return(obj)
+	data.frame(genes = unlist(obj[[1]]), set = rep(obj[[2]], times = sapply(obj[[1]], length)), stringsAsFactors = FALSE)
+}
+#
+msigdb.genesets_old_version = function(sets=NULL, type=c('symbols', 'entrez'), species=c('human','mouse'), return.data.frame=FALSE){
 	type=match.arg(type)
 	species=match.arg(species)
 	if(species=='mouse' && type=='entrez') stop('Only symbols type is supported for mouse\n')

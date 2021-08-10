@@ -11,6 +11,5 @@ A character string.
 }
 \seealso{\code{\link{msigdb.genesets}}, \code{\link{read.gmt}}}
 \examples{
-##not run###
-#msigdb.version()
+msigdb.version()
 }

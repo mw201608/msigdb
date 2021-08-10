@@ -20,6 +20,7 @@ A data.frame with three components:
 }
 \seealso{\code{\link{read.gaf}}}
 \examples{
-##not run###
-#x=read.obo()
+\dontrun{
+x = read.obo()
+}
 }

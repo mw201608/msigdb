@@ -5,7 +5,7 @@
 \description{
   This function returns pre-compiled MSigDB gene set collections
 }
-\usage{msigdb.genesets(sets=NULL, type=c('symbols', 'entrez'), species=c('human','mouse'), return.data.frame=FALSE)}
+\usage{msigdb.genesets(sets = NULL, type = c('symbols', 'entrez'), species=c('human', 'mouse'), return.data.frame = FALSE)}
 \arguments{
  \item{sets}{A vector of possible gene set collections. See \code{details}.}
  \item{type}{Type of gene name. Must be one of '\code{symbols}' and '\code{entrez}'.}
@@ -24,7 +24,5 @@ If \code{return.data.frame} is {TRUE}, returns a data.frame with genes in the fi
 \seealso{\code{\link{read.gmt}}, \code{\link{msigdb.version}}, \code{\link{msigdb.collections}}}
 \examples{
 #To load human gene ontology gene sets
-\dontrun{
-Result=msigdb.genesets(c('C5.BP','C5.CC','C5.MF'))
-}
+Result = msigdb.genesets(c('c5.go.bp', 'c5.go.cc', 'c5.go.mf'))
 }

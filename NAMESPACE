@@ -3,9 +3,8 @@ export(
 	read.obo,
 	read.gaf,
 	write.gmt,
-	convert.msigdb.genesets,
 	msigdb.collections,
 	msigdb.genesets,
 	msigdb.version
 )
-importFrom('utils','download.file','read.table')
+importFrom('utils', 'download.file', 'read.table', 'read.delim')
