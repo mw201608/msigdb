@@ -4,7 +4,7 @@ This R package contains the MSigDB gene set collections (version 7.4 downloaded 
 
 ## Installation
 ```
-devtools::install_github("mw201608/msigdbi")
+devtools::install_github("mw201608/msigdb")
 ```
 To install a previous release of MSigDB v6.1:
 ```
